@@ -55,7 +55,7 @@ class AdaptativeDatePicker extends StatelessWidget {
                     'Escolha uma data',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  onPressed: () => _showDatePicker,
+                  onPressed: () => _showDatePicker(context),
                 )
               ],
             ),

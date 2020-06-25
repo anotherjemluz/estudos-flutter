@@ -1,4 +1,4 @@
-name: despesas
+name: FitneessApp
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -61,22 +61,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Raleway
+    - family: OpenSans
       fonts:
-        - asset: assets/fonts/Raleway-Black.ttf
-          weight: 900
-        - asset: assets/fonts/Raleway-Bold.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Raleway-Regular.ttf
-    - family: RobotoCondensed
+    - family: QuickSand
       fonts:
-        - asset: assets/fonts/RobotoCondensed-Bold.ttf
+        - asset: assets/fonts/Quicksand-Regular.ttf
+        - asset: assets/fonts/Quicksand-Bold.ttf
           weight: 700
-        - asset: assets/fonts/RobotoCondensed-Italic.ttf
-          style: italic
-        - asset: assets/fonts/RobotoCondensed-Regular.ttf
-        - asset: assets/fonts/RobotoCondensed-Light.ttf
-          weight: 300
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

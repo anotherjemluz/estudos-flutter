@@ -1,5 +1,5 @@
-import 'package:despesas/models/category.dart';
 import 'package:flutter/material.dart';
+import '../models/category.dart';
 
 import '../components/category_item.dart';
 import '../data/dummy_data.dart';
@@ -8,9 +8,9 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Vamos Cozinhar'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Vamos Cozinhar'),
+      // ),
       body: GridView(
         padding: const EdgeInsets.all(20),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(

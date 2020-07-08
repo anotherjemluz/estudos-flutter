@@ -1,4 +1,3 @@
-import 'package:despesas/screens/categories_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../models/category.dart';

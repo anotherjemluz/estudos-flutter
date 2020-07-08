@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'config/app_routes.dart';
 
+import 'screens/tabs_screen.dart';
 import 'screens/categories_screen.dart';
 import 'screens/categories_meals_screen.dart';
 import 'screens/meal_detail_screen.dart';
@@ -32,7 +33,8 @@ class FitnessApp extends StatelessWidget {
       //   '/categories-meals': (ctx) => CategoriesMealsScreen()
       // },
       routes: { 
-        AppRoutes.HOME: (ctx) => CategoriesScreen(),
+        // AppRoutes.HOME: (ctx) => CategoriesScreen(),
+        AppRoutes.HOME: (ctx) => TabsScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen()
       },

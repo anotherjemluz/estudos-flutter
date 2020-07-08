@@ -1,5 +1,5 @@
-import 'package:despesas/config/app_routes.dart';
 import 'package:flutter/material.dart';
+import '../config/app_routes.dart';
 
 import '../models/meal.dart';
 import '../config/app_routes.dart';

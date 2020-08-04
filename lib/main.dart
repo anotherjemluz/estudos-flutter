@@ -1,59 +1,35 @@
 import 'package:flutter/material.dart';
 
-import 'config/app_routes.dart';
+import './config/app_routes.dart';
+import './views/products_overview_screen.dart';
+import './views/product_detail_screen.dart';
 
-import 'screens/tabs_screen.dart';
-import 'screens/categories_screen.dart';
-import 'screens/categories_meals_screen.dart';
-import 'screens/meal_detail_screen.dart';
+// roda o app
+void main() => runApp(LojaApp());
 
-void main() => runApp(FitnessApp());
-
-class FitnessApp extends StatelessWidget {
+// app
+class LojaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // retorna um widget(component)
     return MaterialApp(
-      title: 'Vamos Cozinhar?',
+      title: 'Minha loja',
+      
+      // olha aqui outro componente
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.green,
-        fontFamily: 'Raleway',
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
-        textTheme: ThemeData.light().textTheme.copyWith(
-              title: TextStyle(
-                fontSize: 18,
-                fontFamily: 'RobotoCondensed'
-              ),
-          ),
+        // mais componente
+        primarySwatch: Colors.purple,
+        accentColor: Colors.deepOrange,
+        fontFamily: 'Lato',
       ),
-      // home: CategoriesScreen(),
-      // initialRoute: '/',
-      // routes: { 
-      //   '/': (ctx) => CategoriesScreen(),
-      //   '/categories-meals': (ctx) => CategoriesMealsScreen()
-      // },
-      routes: { 
-        // AppRoutes.HOME: (ctx) => CategoriesScreen(),
-        AppRoutes.HOME: (ctx) => TabsScreen(),
-        AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
-        AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen()
+      
+      // essa eh uma pagina (um componente como vc pode ver)
+      home: ProductOverviewScreen(),
+
+      // rotas da aplicação
+      routes: {
+        AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(),
       },
-      // onGenerateRoute: (settings) {
-      //   if(settings.name == '/a') {
-      //     return null;
-      //   } else if (settings.name == '/a') {
-      //     return null;
-      //   } else {
-      //     return MaterialPageRoute(
-      //       builder: (_) {
-      //         return ErrorScreen();
-      //       }
-      //     );
-      //   }
-      // },
-      // onUnknownRoute: (settings) {
-      //   same that generateRoute
-      // },
     );
   }
 }

@@ -36,7 +36,9 @@ class CategoryItem extends StatelessWidget {
         padding: EdgeInsets.all(15),
         child: Text(
           category.title,
-          style: Theme.of(context).textTheme.title,
+          style: TextStyle(
+            color: Colors.black87,
+          ),
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),

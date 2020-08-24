@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './config/app_routes.dart';
-import './providers/products.dart';
+
 import './views/products_overview_screen.dart';
 import './views/product_detail_screen.dart';
+import './views/cart_screen.dart';
+
+import './providers/products.dart';
+import './providers/cart.dart';
 
 // roda o app
 void main() => runApp(LojaApp());
@@ -14,8 +18,15 @@ class LojaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // retorna um widget(component)
-    return ChangeNotifierProvider(
-      create: (_) => new Products(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => new Products(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => new Cart(),
+        ),
+      ],
       child: MaterialApp(
         title: 'Minha loja',
 
@@ -33,6 +44,7 @@ class LojaApp extends StatelessWidget {
         // rotas da aplicação
         routes: {
           AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(),
+          AppRoutes.CART: (ctx) => CartScreen(),
         },
       ),
     );

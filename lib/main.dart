@@ -9,6 +9,7 @@ import './views/cart_screen.dart';
 
 import './providers/products.dart';
 import './providers/cart.dart';
+import './providers/orders.dart';
 
 // roda o app
 void main() => runApp(LojaApp());
@@ -25,6 +26,9 @@ class LojaApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => new Cart(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => new Orders(),
         ),
       ],
       child: MaterialApp(

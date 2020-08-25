@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:ybm/providers/orders.dart';
 
 import '../providers/cart.dart';
 
@@ -32,7 +33,10 @@ class CartScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Provider.of<Orders>(context, listen: false).addOrder(cart);
+                      cart.clear();
+                    },
                     child: Text(
                       'COMPRAR',
                       style: TextStyle(

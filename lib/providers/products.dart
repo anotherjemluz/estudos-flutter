@@ -11,6 +11,10 @@ class Products with ChangeNotifier {
   List<Product> get favoriteItems {
     return _items.where((product) => product.isFavorite).toList();
   }
+
+  int get itemsCount {
+    return _items.length;
+  }
   
   // retorna a referencia (a variavel propriamente dita)
   // List<Product> get items => _items;

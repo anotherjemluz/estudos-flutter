@@ -1,8 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './config/app_routes.dart';
 
+import './views/product_form_screen.dart';
+import './views/products_panel_screen.dart';
 import './views/products_overview_screen.dart';
 import './views/product_detail_screen.dart';
 import './views/cart_screen.dart';
@@ -50,7 +54,9 @@ class LojaApp extends StatelessWidget {
         routes: {
           AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(),
           AppRoutes.CART: (ctx) => CartScreen(),
-          AppRoutes.ORDERS: (ctx) => OrdersScreen()
+          AppRoutes.ORDERS: (ctx) => OrdersScreen(),
+          AppRoutes.PRODUCTS_PANEL: (ctx) => ProductsPanelScreen(),
+          AppRoutes.PRODUCT_FORM: (ctx) => ProductFormScreen()
         },
       ),
     );

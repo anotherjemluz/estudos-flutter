@@ -3,7 +3,7 @@ import 'product.dart';
 import '../data/dummy_data.dart';
 
 class Products with ChangeNotifier {
-  List<Product> _items = DUMMY_PRODUCTS;
+  List<Product> _items = dummyProductsData;
 
   //retorna uma copia 
   List<Product> get items => [ ..._items ];

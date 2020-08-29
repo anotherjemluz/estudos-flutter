@@ -1,4 +1,3 @@
-import '../components/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 import '../components/main_drawer.dart';
@@ -56,7 +55,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             alignment: Alignment.topLeft,
             child: Text(
               'Filtros',
-              style: Theme.of(context).textTheme.title,
+              style: Theme.of(context).textTheme.headline6,
             ),
           ),
           Expanded(

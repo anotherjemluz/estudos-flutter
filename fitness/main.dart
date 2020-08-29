@@ -62,7 +62,7 @@ class _FitnessAppState extends State<FitnessApp> {
         fontFamily: 'Raleway',
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
-              title: TextStyle(
+              headline6: TextStyle(
                 fontSize: 18,
                 fontFamily: 'RobotoCondensed'
               ),
